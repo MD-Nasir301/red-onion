@@ -1,0 +1,24 @@
+.login-area {
+  display: flex;
+  margin-left: 25px;
+}
+.cart-icon {
+    margin-right: 20px;
+    line-height: 25px;
+}
+.login-area button {
+    border: none;
+    margin-right: 30px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .login-btn {
+    background: none;
+  }
+  .singUp-btn {
+    padding: 10px 20px;
+    border-radius: 25px;
+    background: red;
+    color: #fff;
+  }
+  

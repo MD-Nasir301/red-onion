@@ -1,0 +1,37 @@
+.banner-search {
+    width: 30%;
+}
+.banner-area {
+    background:url('../../images/bannerbackground.png');
+    min-height: 500px;
+    background-size: cover;
+    background-position: -70px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.banner-area p {
+    margin: 0px;
+    font-size: 50px;
+    margin-top: 120px;
+    margin-bottom: 25px;
+    font-weight: 500;
+}
+.banner-search  input {
+    width: 320px;
+    padding: 12px 20px;
+    background:rgba(128, 128, 128, 0.109);
+    border: none;
+    border-radius: 25px;
+}
+
+.search-btn {
+    background:red;
+    color: wheat;
+    padding: 9px 26px;
+    font-size: 14px;
+    border-radius: 25px;
+    margin-left: -80px;
+    display: inline-block;
+    cursor: pointer;
+}

@@ -1,0 +1,46 @@
+.cart-items {
+   max-height: 300px;
+   overflow-y: auto;
+}
+.food-items { 
+    display: flex;
+    justify-content: space-between;
+    background: #F5F5F5; 
+    padding: 5px;
+    border-radius: 5px;
+    margin: 10px 0px;
+}
+.item-name {
+    width: 75%;
+    display: flex;
+
+}
+.food-item-img {
+    width: 40%;
+}
+.name h2 {
+    margin: 0px;
+}
+.name span {
+    color: red;
+    font-size: 12px;
+}
+.quantity-add-remove {
+    width: 39%;
+    padding-top: 25px;
+}
+.quantity-add-remove button {
+    border: none;
+    padding: 7px 10px;
+    font-size: 20px;
+    cursor: pointer;
+    background: no-repeat;
+    background: none;
+}
+
+.quantity-add-remove span {
+    padding: 5px 9px;
+    background: rgb(255, 255, 255);
+    border-radius: 3px;
+    font-weight: 500;
+}

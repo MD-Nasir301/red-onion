@@ -1,0 +1,79 @@
+.others-items-title {
+    font-weight: 500;
+
+}
+.food-details-area {
+    display: flex;
+    padding: 10px 200px;
+}
+
+.food-details {
+    width: 50%;
+    padding: 60px 25px 30px 10px;
+    box-sizing: border-box;
+}
+.food-details h3 {
+    font-size: 40px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+.food-details p {
+    font-size: 14px;
+    color: gray;
+    margin: 30px 0px;
+    text-align: justify;
+}
+
+.food-details span {
+    font-size: 35px;
+    font-weight: 500;
+    padding: 5px 10px;
+}
+span.add-items-btn {
+    border: 1px solid #cec7c7;
+    padding: 4px 25px;
+    line-height: 30px;
+    border-radius: 25px;
+    display: inline-block;
+}
+
+span.add-items-btn button {
+    border: none;
+    background: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+span.add-items-btn button:focus {
+    outline: none;
+}
+span.add-items-btn > span {
+    font-size: 25px;
+}
+button.addToCart {
+    font-size: 16px;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 25px;
+    background: red;
+    color: #fff;
+    margin-top: 25px;
+    cursor: pointer;
+}
+.food-img {
+    width: 50%;
+}
+.food-img img {
+    width: 100%;
+    padding: 60px;
+}
+.others-food {
+    display: flex;
+    padding:20px 40px;
+    margin-top: 30px;
+    overflow-x: scroll;
+}
+.w50 {
+    width: 40%;
+    padding: 5px 15px ;
+    cursor: pointer;
+}

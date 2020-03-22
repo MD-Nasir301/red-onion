@@ -1,0 +1,67 @@
+
+.dflex {
+    display: flex;
+    justify-content: space-between;
+}
+.underline {
+    border-bottom: 1px solid black;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    width: 50%;
+    margin: 20px 0PX;
+}
+.cart {
+    width: 50%;
+}
+.check-out-page {
+    display: flex;
+    padding: 50px 170px;
+}
+form.delivery-form {
+    margin: 0px;
+    width: 50%;
+}
+form.delivery-form input {
+    width: 90%;
+    font-size: 15px;
+}
+form.delivery-form textarea {
+    width: 90%;
+    font-size: 15px;
+    font-size: 15px;
+    border: none;
+    background: #ececec;
+    padding: 10px 20px;
+    resize: vertical; 
+}
+form.delivery-form button {
+    width: 100%;
+    margin-top: 10PX;
+}
+.cart-top h5 span {
+    font-weight: 500;
+    margin-right: 5px;
+}
+.cart-top h5 {
+    margin-bottom: 10px;
+}
+
+.cart-top p {
+    font-size: 14px;
+}
+
+.price-count {
+    font-weight: 500;
+    line-height: 26px;
+    /* margin-bottom: 8px; */
+}
+.price-count button {
+    width: 100%;
+    padding: 10px;
+    border: sienna;
+    color: white;
+    background: #bfb2cc;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+}
