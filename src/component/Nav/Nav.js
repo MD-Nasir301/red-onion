@@ -1,5 +1,7 @@
 import React from 'react';
 
+//nav
+
 const Nav = (props) => {
     const food = props.food
     const handleFoodsCategory = props.handleFoodsCategory
