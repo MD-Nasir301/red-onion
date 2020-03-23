@@ -1,8 +1,10 @@
-.cart-items {
-   max-height: 300px;
-   overflow-y: auto;
+
+.food-item-wrap {
+    max-height: 300px;
+    overflow-y: auto
 }
 .food-items { 
+
     display: flex;
     justify-content: space-between;
     background: #F5F5F5; 
@@ -17,6 +19,12 @@
 }
 .food-item-img {
     width: 40%;
+}
+.food-item-img img {
+    width: 100%;
+    padding: 0px 8px 0 1px;
+    box-sizing: border-box;
+    margin-top: 10px;
 }
 .name h2 {
     margin: 0px;

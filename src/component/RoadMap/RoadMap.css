@@ -1,0 +1,65 @@
+.map {
+    width: 45%;
+    padding: 0 50px;
+}
+.map img{
+    width: 100%;
+}
+.delivery-time {
+    width: 20%;
+    background: #fff5f5;
+    padding: 20px 30px;
+    border-radius: 25px;
+
+}
+.delivery-time  img{
+    width: 30%;
+
+}
+
+.location-area {
+    display: flex;
+    justify-content: space-around;
+}
+.location {
+    background: #fff;
+    padding: 2px 15px;
+    border-radius: 10px;
+    margin: 10px 0px;
+}
+.location ul li {
+    list-style: none;
+}
+
+.location ul {
+    border-left: 1px solid;
+    padding: 0px 15px;
+}
+
+.customer-name {
+    display: flex;
+    align-items: center;
+}
+.customer-img {
+    width: 30%;
+    margin-right: 10px;
+}
+.customer-img img {
+    width: 100%;
+}
+.mb-0 {
+    margin-bottom: 0;
+}
+.mt-5 {
+    margin-top: 5px;
+}
+.contact-btn {
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    background: red;
+    color: #fff;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}

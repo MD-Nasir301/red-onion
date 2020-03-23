@@ -170,7 +170,7 @@ var users =
     "name": "Bagel and cream cheese",
     "title": "How we dream about our future",
 	"img":"https://live.staticflickr.com/65535/49680669288_5a79f51453_m.jpg",
-    "price":2299 ,
+    "price":22.99 ,
 	"details":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur facilis iste, illum ducimus itaque nostrum, eos quia rem asperiores molestias cum et ratione? Nemo dolores laborum ab tempora dolorum ad.nostrum, eos quia rem asperiores molestias cum et ratione? Nemo dolores laborum ab tempora dolorum a",
 	"category":"dinner"
   },

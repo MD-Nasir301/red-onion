@@ -15,7 +15,7 @@ form {
   padding: 5px 20px;
 }
 
-.login button {
+.login .login-btn {
   display: block;
   color: #fdfdfd;
   background: red;

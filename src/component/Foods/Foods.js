@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 import './Foods.css'
 import Food from '../Food/Food';
 import foods from '../../fakeData/foods';
-import { addToDatabaseCart, getDatabaseCart } from '../../utilities/databaseManager';
 import { Link } from 'react-router-dom';
 import Nav from '../Nav/Nav';
+import Auth from '../Login/userAuth';
 
 
 const Foods = () => {
+    const auth =   Auth()
     const allFood = foods;
     const lunch = allFood.filter(fd => fd.category === "lunch")
     
@@ -30,7 +31,10 @@ const Foods = () => {
             }
 
         <div className="checkout-btn">
-          <Link to="/checkout"> <button>Checkout Your Food</button></Link>
+            {
+                auth.user ?<Link to="/checkout"> <button className="active-btn">Checkout Your Food</button></Link>:<Link to="/checkout"> <button>Checkout Your Food</button></Link>
+            }
+          
         </div>
 
         </div>

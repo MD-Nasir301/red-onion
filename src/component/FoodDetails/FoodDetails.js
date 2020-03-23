@@ -4,10 +4,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartPlus } from '@fortawesome/free-solid-svg-icons'
 import foods from '../../fakeData/foods';
 import './FoodDetails.css'
+import { addToDatabaseCart } from '../../utilities/databaseManager';
+
 const FoodDetails = (props) => {
 
-    const [cart,setCart] = useState()
-    console.log("check state in array", cart);
+    const [cart,setCart] = useState([])
+    console.log("ray", cart);
 
     const {foodKey} = useParams()
 
@@ -26,17 +28,20 @@ const FoodDetails = (props) => {
         setQuantity(quantity+1)
     }
     const handleRemoveQuantity = ()=> {
-        if(quantity === 1){
-            return 1
+        if(quantity === 0){
+            return 0
         }
         setQuantity(quantity-1)
     }
 
     const handleAddToCart = () => {
-        const newCart = foodItem
-         newCart.quantity = quantity
+        foodItem.quantity = quantity
+        const newCart = [...cart,foodItem]  
         setCart(newCart)
+        addToDatabaseCart(foodItem.key,foodItem.quantity)
+       
     }
+ 
 
 
     return (

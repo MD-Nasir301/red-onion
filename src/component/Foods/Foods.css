@@ -2,6 +2,9 @@ nav {
     text-align: center;
     margin: 50px auto;
 }
+.checkout-btn button.active-btn {
+    background: red;
+}
 nav button {
     color: black;
     font-weight: 700;

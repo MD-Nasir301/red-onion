@@ -11,7 +11,7 @@
     margin: 20px 0PX;
 }
 .cart {
-    width: 50%;
+    width: 60%;
 }
 .check-out-page {
     display: flex;
@@ -34,9 +34,16 @@ form.delivery-form textarea {
     padding: 10px 20px;
     resize: vertical; 
 }
-form.delivery-form button {
+form.delivery-form  button {
     width: 100%;
+    padding: 13px;
     margin-top: 10PX;
+    margin-left: 2px;
+    background: red;
+    color: #FFF;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
 }
 .cart-top h5 span {
     font-weight: 500;

@@ -46,12 +46,15 @@ firebase.initializeApp(firebaseConfig);
             .then(function(res) {
                setUser(null)
                window.location.reload(false);
+               window.location.replace("/")
                return res
               })
               .catch(function(error) {
                 return error.message
               });
         }
+
+   
 
         useEffect(()=>{
             firebase.auth().onAuthStateChanged(function(usr) {
