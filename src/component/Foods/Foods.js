@@ -11,7 +11,7 @@ const Foods = () => {
 
   const [allFood, setAllFood] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:3200/foods")
+    fetch("https://red-onion-app.herokuapp.com/foods")
       .then((res) => res.json())
       .then((data) => {
         setAllFood(data);

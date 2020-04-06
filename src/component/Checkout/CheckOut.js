@@ -32,7 +32,7 @@ const CheckOut = () => {
           shipment: shipInfo,
           payment: payment
         };
-        fetch("http://localhost:3200/placeOrder", {
+        fetch("https://red-onion-app.herokuapp.com/Order", {
           method: "post",
           body: JSON.stringify(orderDetails),
           headers: {
