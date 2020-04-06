@@ -31,6 +31,7 @@ firebase.initializeApp(firebaseConfig);
             .then(res => {
                 const singInUser = getUser(res.user)
                 setUser(singInUser)
+                window.history.go(-1)
                 return res.user
             })
             .catch(err => {
