@@ -36,6 +36,7 @@ const Login = () => {
     }
   return (
     <div>
+      <p class="notice">NOTICE : Only (Login with google) working.</p>
       <form className="login" onSubmit={loginWithEmail}>
         <input onBlur={handleBlur} type="email" placeholder="Email" required /> <br />
         <input onBlur={handleBlur} type="password" placeholder="Password" required /> <br />

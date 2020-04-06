@@ -38,3 +38,8 @@ form {
     font-weight: 700;
     cursor: pointer;
 }
+.notice {
+  color:red;
+  text-align: center;
+  font-weight: 500;
+}

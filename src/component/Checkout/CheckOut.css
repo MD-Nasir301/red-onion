@@ -3,6 +3,9 @@
     display: flex;
     justify-content: space-between;
 }
+.form-area {
+    width: 75%;
+}
 .underline {
     border-bottom: 1px solid black;
     margin-bottom: 20px;
@@ -19,31 +22,7 @@
 }
 form.delivery-form {
     margin: 0px;
-    width: 50%;
-}
-form.delivery-form input {
-    width: 90%;
-    font-size: 15px;
-}
-form.delivery-form textarea {
-    width: 90%;
-    font-size: 15px;
-    font-size: 15px;
-    border: none;
-    background: #ececec;
-    padding: 10px 20px;
-    resize: vertical; 
-}
-form.delivery-form  button {
-    width: 100%;
-    padding: 13px;
-    margin-top: 10PX;
-    margin-left: 2px;
-    background: red;
-    color: #FFF;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
+    width: 70%;
 }
 .cart-top h5 span {
     font-weight: 500;
@@ -52,7 +31,6 @@ form.delivery-form  button {
 .cart-top h5 {
     margin-bottom: 10px;
 }
-
 .cart-top p {
     font-size: 14px;
 }
@@ -71,4 +49,38 @@ form.delivery-form  button {
     border-radius: 5px;
     margin-top: 20px;
     cursor: pointer;
+}
+form.ship-form.delivery-form input {
+    height: 35px;
+    margin: 5px 0px;
+    padding: 5px;
+    background: #e0d7d7;
+    border: none;
+    border-radius: 5px;
+    width: 96%;
+}
+form.ship-form.delivery-form button.submit  {
+    width: 98%;
+    padding: 13px;
+    margin-top: 10PX;
+    margin-left: 2px;
+    background: red;
+    color: #FFF;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    height: 40px;
+}
+form.ship-form.delivery-form a.submit {
+    display: block;
+    margin-top: 10PX;
+    background: red;
+    color: #FFF;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    height: 40px;
+    text-decoration: none;
+    text-align: center;
+    line-height: 35px;
 }
