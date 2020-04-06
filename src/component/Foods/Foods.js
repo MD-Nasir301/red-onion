@@ -1,44 +1,60 @@
-import React, { useState } from 'react';
-import './Foods.css'
-import Food from '../Food/Food';
-import foods from '../../fakeData/foods';
-import { Link } from 'react-router-dom';
-import Nav from '../Nav/Nav';
-import Auth from '../Login/userAuth';
-
+import React, { useState } from "react";
+import "./Foods.css";
+import Food from "../Food/Food";
+import { Link } from "react-router-dom";
+import Nav from "../Nav/Nav";
+import Auth from "../Login/userAuth";
+import { useEffect } from "react";
 
 const Foods = () => {
-    const auth =   Auth()
-    const allFood = foods;
-    const lunch = allFood.filter(fd => fd.category === "lunch")
-    
-    const [food, setFood] = useState(lunch)
+  const auth = Auth();
 
-    
-    const handleFoodsCategory = (category) => {
-        const displayFood = allFood.filter(fd => fd.category === category)
-        setFood(displayFood)
-    }
-    
+  const [allFood, setAllFood] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:3200/foods")
+      .then((res) => res.json())
+      .then((data) => {
+        setAllFood(data);
+        console.log("data", data);
+      });
+  }, []);
 
-    return (
-        <div className="foods-area">
-            <Nav handleFoodsCategory ={handleFoodsCategory} food={food}></Nav>
+  const lunch = allFood.filter((fd) => fd.category === "lunch");
+  console.log("lunch", lunch);
 
+  const [food, setFood] = useState(lunch);
+  console.log("food", food);
 
-            {
-                food.map(fd => <Food food={fd}></Food>)
-            }
+  const handleFoodsCategory = (category) => {
+    const displayFood = allFood.filter((fd) => fd.category === category);
+    setFood(displayFood);
+  };
 
-        <div className="checkout-btn">
-            {
-                auth.user ?<Link to="/checkout"> <button className="active-btn">Checkout Your Food</button></Link>:<Link to="/checkout"> <button>Checkout Your Food</button></Link>
-            }
-          
-        </div>
+  return (
+    <div className="foods-area">
+      <Nav handleFoodsCategory={handleFoodsCategory} food={food}></Nav>
 
-        </div>
-    );
+      {
+        food.map((fd) => ( <Food food={fd}></Food>))
+      }
+
+      <div className="checkout-btn">
+        {auth.user ? (
+          <Link to="/checkout">
+            {" "}
+            <button className="active-btn">Checkout Your Food</button>
+          </Link>
+        ) : (
+          <Link to="/checkout">
+            {" "}
+            <button>
+              Checkout Your Food
+            </button>
+          </Link>
+        )}
+      </div>
+    </div>
+  );
 };
 
 export default Foods;

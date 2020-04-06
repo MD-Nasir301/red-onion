@@ -1,0 +1,10 @@
+.style {
+    margin: 0px;
+    width: 70%;
+}
+.StripeElement.StripeElement--empty {
+    height: 50px;
+}
+.error {
+    color: red;
+}

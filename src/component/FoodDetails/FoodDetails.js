@@ -5,25 +5,30 @@ import { faCartPlus } from '@fortawesome/free-solid-svg-icons'
 import foods from '../../fakeData/foods';
 import './FoodDetails.css'
 import { addToDatabaseCart } from '../../utilities/databaseManager';
+import { useEffect } from 'react';
 
 const FoodDetails = (props) => {
 
     const [cart,setCart] = useState([])
-    console.log("ray", cart);
-
     const {foodKey} = useParams()
 
-    const foodItem = foods.find(fd => fd.key === foodKey)
+    // const [foods,setFoods] = useState(null)
 
+    // useEffect(()=>{
+    //     fetch('http://localhost:3200/foods/'+ foodKey)
+    //     .then(res => res.json())
+    //     .then(data => {
+    //         setFoods(data)
+    //     })
+    // },[])
+
+    const foodItem = foods.find(fd => fd.key === foodKey)
     const {name,details,price,img} = foodItem
     const [quantity, setQuantity] = useState(1)
-
     const foodCategory = foods.find(fd => fd.category === foodItem.category)
     const category  = foodCategory.category
     const othersFood = foods.filter(food => food.category === category)
-
     
-
     const handleAddQuantity = ()=> {
         setQuantity(quantity+1)
     }
@@ -33,16 +38,12 @@ const FoodDetails = (props) => {
         }
         setQuantity(quantity-1)
     }
-
     const handleAddToCart = () => {
         foodItem.quantity = quantity
         const newCart = [...cart,foodItem]  
         setCart(newCart)
         addToDatabaseCart(foodItem.key,foodItem.quantity)
-       
     }
- 
-
 
     return (
         <div className="food-details-area">

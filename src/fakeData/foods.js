@@ -1,4 +1,4 @@
-var users =
+var foodItems =
 
 	[
   {
@@ -189,4 +189,4 @@ var users =
 	
 	
 	
-export default users;
+export default foodItems;

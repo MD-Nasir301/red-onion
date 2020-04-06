@@ -1,24 +1,37 @@
 import React, { useState, useEffect } from "react";
 import "./CartItem.css";
 import { getDatabaseCart } from "../../utilities/databaseManager";
-import foods from "../../fakeData/foods";
 import { Link } from "react-router-dom";
 import Auth from "../Login/userAuth";
 const CartItem = () => {
   const auth = Auth()
   const [cart, setCart] = useState([]);
+  const [foods, setFoods] = useState([]);
+
+  useEffect(()=> {
+    fetch("http://localhost:3200/foods")
+    .then(res => res.json())
+    .then(data => {
+      setFoods(data)
+    })
+  },[])
 
   useEffect(() => {
     const saveCart = getDatabaseCart();
     const foodKey = Object.keys(saveCart);
 
-    const cartFood = foodKey.map(key => {
+    if(foods.length){
+      const cartFood = foodKey.map(key => {
       const food = foods.find(fd => fd.key === key);
       food.quantity = saveCart[key];
       return food;
     });
+    
     setCart(cartFood);
-  }, []);
+    }
+ 
+
+  }, [foods]);
 
   //    const [qu, setqu] = useState(0)
 

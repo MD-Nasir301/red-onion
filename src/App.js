@@ -12,6 +12,7 @@ import Nav from "./component/Nav/Nav";
 import Login from "./component/Login/Login";
 import { AuthContextProvider } from "./component/Login/userAuth";
 import RoadMap from "./component/RoadMap/RoadMap";
+import Inventory from "./component/Inventory/Inventory";
 
 function App() {
   return (
@@ -35,6 +36,10 @@ function App() {
 
             <Route path="/checkout">
               <CheckOut></CheckOut>
+            </Route>
+
+            <Route path="/inventory">
+              <Inventory></Inventory>
             </Route>
 
             <Route path="/roadMap">

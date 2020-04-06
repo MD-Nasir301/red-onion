@@ -38,3 +38,6 @@ nav button:focus {
     background: pink;
     cursor: pointer;
 }
+.disable-btn {
+    cursor: no-drop;
+}
